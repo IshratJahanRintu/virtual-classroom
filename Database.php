@@ -8,7 +8,7 @@ class Database
     private function __construct()
     {
 
-        $dns = "mysql:host=localhost;dbname=farming_assistant;charset=utf8";
+        $dns = "mysql:host=localhost;dbname=virtual-classroom;charset=utf8";
         $user = "root";
         $password = "";
         try {

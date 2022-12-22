@@ -16,6 +16,8 @@
         <!-- custom css file link  -->
         <link rel="stylesheet"
               href="css/style.css">
+        <link rel="stylesheet"
+              href="css/loginpage.css">
 
     </head>
 
@@ -49,11 +51,12 @@
                        placeholder="enter your password"
                        required
                        class="box">
-                <input type="submit"
+                <input style="background-color:purple;"
+                       type="submit"
                        name="submit"
                        value="login now"
-                       class="btn">
-                <p>don't have an account? <a href="register.php">register now</a></p>
+                       class="white-btn btn login-btn">
+
             </form>
 
         </div>

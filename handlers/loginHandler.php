@@ -16,6 +16,6 @@ if (isset($_POST['phone']) && isset($_POST['login_password'])) {
 
 
 
-    $user = new user();
+    $user = new user("both");
     $user->login($login_info);
 }
