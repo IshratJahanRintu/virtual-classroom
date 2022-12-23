@@ -59,14 +59,14 @@
              center;">
             <ol>
                 <li class="menu-item">
-                    <a href="#0"
+                    <a href="#"
                        class="home">
                         <i class="ion ion-md-home"></i>
                         <span>Home</span>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#0"
+                    <a href="http://localhost/virtual-classroom/course-list.php"
                        class="about">
                         <i class="fa-solid fa-book-open"
                            style="font-size: 38px;"></i>
@@ -83,10 +83,9 @@
                         <div class="dots"></div>
                     </a>
                     <ol class="sub-menu">
-                        <li class="menu-item item--a"><a href="#0"
+                        <li class="menu-item item--a"><a href="http://localhost/virtual-classroom/student-list.php"
                                class="item--a"><span>Student list</span></a></li>
-                        <li class="menu-item item--b"><a href="http://localhost/virtual-classroom/addstudent.php"
-                               class="item--b"><span>Add student</span></a></li>
+
 
                     </ol>
                 </li>
@@ -98,10 +97,9 @@
                         <span>Teachers</span>
                     </a>
                     <ol class="sub-menu">
-                        <li class="menu-item item--a"><a href="#0"
+                        <li class="menu-item item--a"><a href="http://localhost/virtual-classroom/teacher-list.php"
                                class="item--a"><span>Teacher list</span></a></li>
-                        <li class="menu-item item--b"><a href="#0"
-                               class="item--b"><span>Add teacher</span></a></li>
+
                     </ol>
                 </li>
                 <li class="menu-item">
@@ -115,4 +113,4 @@
             </ol>
         </nav>
         <?php
-    include_once 'footer.php' ?>
+      include_once 'footer.php' ?>

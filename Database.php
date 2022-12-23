@@ -91,7 +91,7 @@ class Database
             $table_columns = implode(', ', array_keys($params));
             $table_values = implode(", ", array_keys($cols));
 
-            $sql = "INSERT INTO $table ($table_columns) VALUES($table_values)";
+            echo   $sql = "INSERT INTO $table ($table_columns) VALUES($table_values)";
             $statement = $this->connection->prepare($sql);
 
             if ($statement->execute($cols)) {
