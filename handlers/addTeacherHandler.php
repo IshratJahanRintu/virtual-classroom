@@ -30,5 +30,8 @@ if (isset($_POST['add_teacher'])) {
     if ($a->addMemeber($teacher_info)) {
         $_SESSION['message'] = "teacher added successfully!";
         header("Location:../teacher-list.php");
+    } else {
+
+        header("Location:../teacher-list.php");
     }
 }

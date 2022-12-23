@@ -104,7 +104,7 @@ $teacher_list = $user->viewAllMembers();
             </div>
         </div>
     </div>
-    <!-- Edit Modal HTML -->
+    <!-- add Modal HTML -->
     <div id="addTeacherModal"
          class="modal fade">
         <div class="modal-dialog">
@@ -125,14 +125,16 @@ $teacher_list = $user->viewAllMembers();
                             <input type="text"
                                    name="name"
                                    placeholder="Name"
-                                   class="form-control">
+                                   class="form-control"
+                                   required>
                             <i class="zmdi zmdi-account"></i>
                         </div>
                         <div class="form-wrapper">
                             <input type="email"
                                    name="email"
                                    placeholder="Email Address"
-                                   class="form-control">
+                                   class="form-control"
+                                   required>
                             <i class="zmdi zmdi-email"></i>
                         </div>
                         <div class="form-wrapper">
@@ -140,13 +142,15 @@ $teacher_list = $user->viewAllMembers();
                                    name="phone"
                                    id="phone"
                                    placeholder="Contact no"
-                                   class="form-control">
+                                   class="form-control"
+                                   required>
                             <i class="zmdi zmdi-phone"></i>
                         </div>
                         <div class="form-wrapper">
                             <select name="designation"
                                     id=""
-                                    class="form-control">
+                                    class="form-control"
+                                    required>
                                 <option value=""
                                         disabled
                                         selected>Designation</option>
@@ -163,7 +167,8 @@ $teacher_list = $user->viewAllMembers();
                                    placeholder="Password"
                                    name="password"
                                    id="pwd"
-                                   class="form-control">
+                                   class="form-control"
+                                   required>
                             <i class="zmdi zmdi-lock"></i>
                         </div>
                         <div class="form-wrapper">
@@ -171,7 +176,8 @@ $teacher_list = $user->viewAllMembers();
                                    placeholder="Confirm Password"
                                    name="r_password"
                                    id="c_pwd"
-                                   class="form-control">
+                                   class="form-control"
+                                   required>
                             <i class="zmdi zmdi-lock"></i>
                         </div>
                     </div>
@@ -191,15 +197,15 @@ $teacher_list = $user->viewAllMembers();
         </div>
     </div> -->
     <!-- Edit Modal HTML -->
-    <div id="editStudentModal"
+    <div id="editTeacherModal"
          class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
                 <form id="access-form"
-                      action="handlers/editStudentHandler.php"
+                      action="handlers/editTeacherHandler.php"
                       method="post">
                     <div class="modal-header">
-                        <h4 class="modal-title">Edit Student information</h4>
+                        <h4 class="modal-title">Edit Teacher information</h4>
                         <button type="button"
                                 class="close"
                                 data-dismiss="modal"
@@ -209,12 +215,14 @@ $teacher_list = $user->viewAllMembers();
                         <div class="form-wrapper">
                             <input type="hidden"
                                    name="user_id"
-                                   value="">
+                                   value=""
+                                   required>
 
                             <input type="text"
                                    name="name"
                                    placeholder="Name"
-                                   class="form-control">
+                                   class="form-control"
+                                   required>
                             <i class="zmdi zmdi-account"></i>
                         </div>
 
@@ -222,24 +230,21 @@ $teacher_list = $user->viewAllMembers();
                             <input type="text"
                                    name="phone"
                                    placeholder="Contact no"
-                                   class="form-control">
+                                   class="form-control"
+                                   required>
                             <i class="zmdi zmdi-phone"></i>
                         </div>
                         <div class="form-wrapper">
-                            <select name="semester"
+                            <select name="designation"
                                     id=""
-                                    class="form-control">
+                                    class="form-control"
+                                    required>
                                 <option value=""
                                         disabled
-                                        selected>Semester</option>
-                                <option value="1">1st</option>
-                                <option value="2">2nd</option>
-                                <option value="3">3rd</option>
-                                <option value="4">4th</option>
-                                <option value="5">5th</option>
-                                <option value="6">6th</option>
-                                <option value="7">7th</option>
-                                <option value="8">8th</option>
+                                        selected>Designation</option>
+                                <option value="Professor">Professor</option>
+                                <option value="Assistant Professor">Assistant Professor</option>
+                                <option value="Lecturer">Lecturer</option>
                             </select>
                             <i class="zmdi zmdi-caret-down"
                                style="font-size: 17px"></i>
@@ -253,7 +258,7 @@ $teacher_list = $user->viewAllMembers();
                                value="Cancel">
                         <input type="submit"
                                class="btn btn-success"
-                               name="edit_student"
+                               name="edit_teacher"
                                value="Update">
                     </div>
                 </form>
@@ -261,11 +266,11 @@ $teacher_list = $user->viewAllMembers();
         </div>
     </div>
     <!-- Delete Modal HTML -->
-    <div id="deleteStudentModal"
+    <div id="deleteTeacherModal"
          class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form action="handlers/deleteStudentHandler.php"
+                <form action="handlers/deleteTeacherHandler.php"
                       method="get">
                     <div class="modal-header">
 
@@ -276,19 +281,20 @@ $teacher_list = $user->viewAllMembers();
                                 aria-hidden="true">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <p>Are you sure you want to delete these Records?</p>
+                        <p>Are you sure you want to delete this records?</p>
                         <p class="text-warning"><small>This action cannot be undone.</small></p>
                     </div>
                     <div class="modal-footer">
                         <input type="button"
-                               class="btn btn-default"
+                               class="btn"
+                               style="border: 1px solid black; color:black; "
                                data-dismiss="modal"
                                value="Cancel">
                         <input type="hidden"
                                name="user_id"
                                value="">
                         <input type="submit"
-                               name="delete_student"
+                               name="delete_teacher"
                                class="btn btn-danger"
                                value="Delete">
                     </div>

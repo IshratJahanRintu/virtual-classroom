@@ -47,7 +47,7 @@ class user
         if ($this->memberExist($member_info['email'])) {
             $_SESSION['message'] = "This email is already registered!";
 
-            header("Location:../student-list.php");
+            return false;
         } else {
             $this->db->insert("user", $member_info);
             return true;
@@ -87,13 +87,22 @@ class user
 
 
 
-    public function editUser($edit_info = array())
+    public function editStudent($edit_info = array())
     {
 
 
         echo  $update_query =  "UPDATE user SET  name='{$edit_info["name"]}',contact_no='{$edit_info["contact_no"]}',semester='{$edit_info["semester"]}' WHERE user_id={$edit_info["user_id"]}";
         $stmnt = $this->db->connection->prepare($update_query);
         $stmnt->execute() or die("update query failed");
-        header("Location:../student-list.php");
+        return true;
+    }
+    public function editTeacher($edit_info = array())
+    {
+
+
+        echo  $update_query =  "UPDATE user SET  name='{$edit_info["name"]}',contact_no='{$edit_info["contact_no"]}',designation='{$edit_info["designation"]}' WHERE user_id={$edit_info["user_id"]}";
+        $stmnt = $this->db->connection->prepare($update_query);
+        $stmnt->execute() or die("update query failed");
+        return true;
     }
 }

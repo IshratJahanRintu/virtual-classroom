@@ -30,5 +30,8 @@ if (isset($_POST['add_student'])) {
     if ($a->addMemeber($student_info)) {
         $_SESSION['message'] = "Student added successfully!";
         header("Location:../student-list.php");
+    } else {
+        $_SESSION['message'] = "Student could not be added";
+        header("Location:../student-list.php");
     }
 }
