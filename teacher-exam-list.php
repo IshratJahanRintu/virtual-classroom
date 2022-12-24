@@ -4,7 +4,10 @@ if (isset($_SESSION)) {
     if ($_SESSION['user_type'] != 'teacher') {
         header("location:loginpage.php");
     }
+} else {
+    header("location:loginpage.php");
 }
+
 include_once 'teacher-navbar.php';
 include_once 'Database.php';
 include_once 'classes/course.php';
@@ -16,11 +19,14 @@ $course_list = $course->viewSpecificTeacherCourses($teacher_info);
 
 
 
+if (count($course_list) > 0) {
+
 
 
 ?>
 
 <section class="courses">
+
 
     <?php foreach ($course_list as $c) { ?>
     <h1 class="heading"><?php echo $c['course_title'] ?></h1>
@@ -31,7 +37,7 @@ $course_list = $course->viewSpecificTeacherCourses($teacher_info);
     <div class="box-container">
 
         <?php $course_exams = $exam->viewSpecificCourseExams($c);
-            foreach ($course_exams as $x) { ?>
+                foreach ($course_exams as $x) { ?>
 
         <div class="box">
             <div class="tutor">
@@ -168,4 +174,9 @@ $course_list = $course->viewSpecificTeacherCourses($teacher_info);
     </div>
     <?php } ?>
 </section>
-<?php include_once 'footer.php' ?>
+<?php
+} else {
+    echo "<h1>No records to show</h1>";
+}
+
+include_once 'footer.php' ?>
