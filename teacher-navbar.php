@@ -7,7 +7,6 @@
               content="IE=edge">
         <meta name="viewport"
               content="width=device-width, initial-scale=1.0">
-        <title>login</title>
 
         <!-- font awesome cdn link  -->
         <link rel="stylesheet"
@@ -17,7 +16,8 @@
               href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 
         <!-- STYLE CSS -->
-
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
 
         <link rel="stylesheet"
               href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
@@ -28,6 +28,11 @@
         <link rel="stylesheet"
               href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+
+        <!-- custom css file link  -->
+
+        <link rel="stylesheet"
               href="css/student-list.css">
         <link rel="stylesheet"
               href="css/addform.css">
@@ -37,6 +42,8 @@
               href="css/navbar.css">
         <link rel="stylesheet"
               href="css/exam-list.css">
+        <link rel="stylesheet"
+              href="css/teacher-exam.css" />
 
         <link rel="stylesheet"
               href="https://anandchowdhary.github.io/ionicons-3-cdn/icons.css"
@@ -52,23 +59,24 @@
     <body>
 
 
+
         <nav class="menu"
              style="display:
              flex;
              align-items:
              center;
              justify-content:
-             center;">
-            <ol>
+             center;width:100%">
+            <ol style="grid-template-columns: repeat(4, 1fr);">
                 <li class="menu-item">
-                    <a href="http://localhost/virtual-classroom/admin-home-page.php"
+                    <a href="http://localhost/virtual-classroom/teacher-home-page.php"
                        class="home">
                         <i class="ion ion-md-home"></i>
                         <span>Home</span>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="http://localhost/virtual-classroom/course-list.php"
+                    <a href="#"
                        class="about">
                         <i class="fa-solid fa-book-open"
                            style="font-size: 38px;"></i>
@@ -91,21 +99,9 @@
 
                     </ol>
                 </li>
-                <li class="menu-item">
-                    <a href="#0"
-                       class="kabobs">
-                        <i class="fas fa-chalkboard-teacher"
-                           style="font-size: 38px;"></i>
-                        <span>Teachers</span>
-                    </a>
-                    <ol class="sub-menu">
-                        <li class="menu-item item--a"><a href="http://localhost/virtual-classroom/teacher-list.php"
-                               class="item--a"><span>Teacher list</span></a></li>
 
-                    </ol>
-                </li>
                 <li class="menu-item">
-                    <a href="http://localhost/virtual-classroom/admin-exam-list.php"
+                    <a href="http://localhost/virtual-classroom/teacher-exam-list.php"
                        class="contact">
                         <i class="ion ion-ios-paper-outline"
                            style="font-size: 38px;"></i>
@@ -114,5 +110,3 @@
                 </li>
             </ol>
         </nav>
-        <?php
-      include_once 'footer.php' ?>

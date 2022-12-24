@@ -2,12 +2,13 @@
 
 class user
 {
-
+    public $table;
 
     public $db;
     public $user_info;
     function __construct($user_type)
     {
+        $this->table = "user";
 
         $this->user_info["user_type"] = $user_type;
         $this->db = Database::getInstance();
@@ -15,22 +16,31 @@ class user
 
 
 
-    // public function login($login_info)
-    // {
-    //     $found_row = $this->db->fetch_data_with_two_column_check($login_info, $this->table, "email", "password");
+    public function login($login_info)
+    {
+        $found_row = $this->db->fetch_data_with_two_column_check($login_info, $this->table, "email", "password");
 
-    //     if (count($found_row) > 0) {
-    //         echo "login successfull";
-    //         echo  $_SESSION['user_id'] = $found_row[0]['user_id'];
-    //         echo $_SESSION['user_type']
-    //             = $found_row[0]['user_type'];
-    //         $_SESSION['message'] = "Login Successfull!";
-    //         // header("location:http://localhost/Farming-assistant/index.php");
-    //     } else {
-    //         $_SESSION['message'] = "Login failed!";
-    //         header("location:http://localhost/virtual-classroom/loginpage.php");
-    //     }
-    // }
+        if (count($found_row) > 0) {
+
+            $_SESSION['user_id'] = $found_row[0]['user_id'];
+            $_SESSION['user_type']
+                = $found_row[0]['user_type'];
+            $_SESSION['message'] = "Login Successfull!";
+            if ($_SESSION['user_type'] == "admin") {
+                header("location:http://localhost/virtual-classroom/admin-home-page.php");
+            } elseif ($_SESSION['user_type'] == "teacher") {
+                header("location:http://localhost/virtual-classroom/teacher-home-page.php");
+            } elseif ($_SESSION['user_type'] == "student") {
+                header("location:http://localhost/virtual-classroom/student-home-page.php");
+            } else {
+
+                header("location:http://localhost/virtual-classroom/loginpage.php");
+            }
+        } else {
+            $_SESSION['message'] = "Login failed!";
+            header("location:http://localhost/virtual-classroom/loginpage.php");
+        }
+    }
 
 
     public function deleteUser($where = null)

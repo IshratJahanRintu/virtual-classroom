@@ -34,7 +34,7 @@ a {
 .menu ol {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  width: 75%;
+  width: 100%;
 }
 @media (max-width: 991px) {
   .menu ol {

@@ -1,0 +1,11 @@
+.Running {
+  color: rgb(50, 205, 50);
+}
+
+.upcoming {
+  color: orange;
+}
+
+.completed {
+  color: darkblue;
+}
