@@ -12,8 +12,6 @@ class exam
 
 
 
-
-
     function addExam($exam_info)
     {
 

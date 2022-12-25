@@ -71,10 +71,10 @@ section {
 .option-btn {
   border-radius: 0.5rem;
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1rem;
   cursor: pointer;
   text-transform: capitalize;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   text-align: center;
   margin-top: rem;
 }
@@ -94,9 +94,9 @@ section {
 
 .btn,
 .inline-btn {
-  background-color: #8e44ad;
-  /* vertical-align: middle; */
-  /* text-align: center; */
+  background-color: #452c63;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .option-btn,
@@ -126,7 +126,7 @@ section {
 
 .courses .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
   gap: 1.5rem;
   justify-content: center;
   align-items: flex-start;
@@ -149,9 +149,10 @@ section {
 }
 
 .courses .box-container .box .tutor h3 {
-  font-size: 1.6rem;
-  color: var(--black);
+  font-size: 1.5rem;
+  color: #701b8c;
   margin-bottom: 0.2rem;
+  font-weight: 700;
 }
 
 .courses .box-container .box .tutor span {
@@ -161,8 +162,8 @@ section {
 
 .courses .box-container .box .thumb {
   position: relative;
-  height: 17rem;
-  background-color: #024368;
+  height: 14rem;
+  background-color: #042f48;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,10 +191,10 @@ section {
 }
 
 .courses .box-container .box .title {
-  font-size: 2rem;
-  color: var(--black);
+  font-size: 1.6rem;
+  color: #117a8b;
   padding-bottom: 0.5rem;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 
 .courses .more-btn {

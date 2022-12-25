@@ -49,15 +49,14 @@ if (count($course_list) > 0) {
             </div>
             <div class="thumb">
                 <i class="ion ion-ios-paper-outline"
-                   style="font-size: 10rem; color: white; text-align: center"
+                   style="font-size: 8rem; color: white; text-align: center"
                    aria-hidden="true"></i>
 
                 <span><?= $x['total_questions'] * $x['marks_per_qn']; ?> Markrs</span>
             </div>
             <h3 class="title"><?= $x['topic']; ?></h3>
-            <a href="#"
-               class="btn btn-success"
-               data-toggle="modal"><i style="font-size: 18px;"
+            <a href="add-question-page.php?exam_id=<?= $x['exam_id']; ?>&total_question=<?= $x['total_questions']; ?>"
+               class="btn"><i style="font-size: 18px;"
                    class="material-icons">&#xE147;</i> <span style="font-size: 19px;">Add Question
                 </span></a>
         </div>
@@ -70,14 +69,14 @@ if (count($course_list) > 0) {
 
                 </div>
             </div>
-            <div style=" background-color:transparent; border:2px solid #024368;box-shadow:none; height:26.5rem;"
+            <div style=" background-color:transparent; border:2px solid #024368;box-shadow:none; height:25.5rem;"
                  class="thumb">
                 <a href="#addExamModal"
                    data-toggle="modal"
                    data-courseid="<?php echo $c['course_id']; ?>">
 
                     <i class="zmdi zmdi-plus-square"
-                       style="font-size: 12rem;  text-align: center;cursor:pointer;color:#024368"
+                       style="font-size: 10rem;  text-align: center;cursor:pointer;color:#024368"
                        title="Add Exam"></i> </a>
 
             </div>
@@ -162,7 +161,7 @@ if (count($course_list) > 0) {
                                    name="add_exam"
                                    value="Add">
                             <input type="button"
-                                   class="btn btn-danger"
+                                   class="option-btn"
                                    data-dismiss="modal"
                                    value="Cancel">
                         </div>

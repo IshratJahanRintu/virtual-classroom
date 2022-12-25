@@ -13,6 +13,7 @@
  <script src="js/exam-list.js"></script>
 
  <script src="js/phone.js"></script>
+ <script src="js/question-form.js"></script>
  </body>
 
  </html>

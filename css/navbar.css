@@ -49,12 +49,12 @@ a {
   /* padding: 5px; */
 }
 .menu ol li a {
-  height: 107px;
+  height: 88px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1em 0;
+  /* padding: 0em 0; */
   background: #452c63;
   color: #fff;
   position: relative;
@@ -66,44 +66,32 @@ a {
 }
 .menu ol li a i {
   display: block;
-  font-size: 54px;
-  transform: translateY(25px);
+  font-size: 33px;
+  transform: translateY(15px);
   transition: transform 400ms ease;
   transition: 0.4s cubic-bezier(0.94, 1.6, 0.5, 1);
-  margin-top: 10px;
+  margin-top: 29px;
+  /* margin-bottom: 0px; */
 }
 .menu ol li a span {
   display: block;
-  margin-top: 0.2em auto;
+  margin-top: 0 auto;
   transition: transform 300ms ease, opacity 150ms ease;
   transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
   transform: translateY(70px);
   opacity: 0;
   /* width: 50px; */
   padding: 5px;
-  margin: 0.2em 0 em;
-  /* margin-top: 0.2em; */
+  /* margin: 0.2em 0em; */
+  margin-top: -12px;
   margin-bottom: 0.4em;
   font-size: 19px;
   padding: 15px 12px;
   /* margin-right: 0.2em; */
   color: #85669c;
+  /* margin-top: 0px; */
 }
-.menu ol li a.home {
-  background: #4b0082;
-}
-.menu ol li a.about {
-  background: #662d91;
-}
-.menu ol li a.widgets {
-  background: #4b0082;
-}
-.menu ol li a.kabobs {
-  background: #662d91;
-}
-.menu ol li a.contact {
-  background: #4b0082;
-}
+
 .menu ol li a.widgets::before,
 .menu ol li a.kabobs::before {
   content: "";

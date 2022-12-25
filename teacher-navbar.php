@@ -31,7 +31,8 @@
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
 
         <!-- custom css file link  -->
-
+        <link rel="stylesheet"
+              href="css/question-form.css">
         <link rel="stylesheet"
               href="css/student-list.css">
         <link rel="stylesheet"
@@ -44,6 +45,7 @@
               href="css/exam-list.css">
         <link rel="stylesheet"
               href="css/teacher-exam.css" />
+
 
         <link rel="stylesheet"
               href="https://anandchowdhary.github.io/ionicons-3-cdn/icons.css"
@@ -79,7 +81,7 @@
                     <a href="#"
                        class="about">
                         <i class="fa-solid fa-book-open"
-                           style="font-size: 38px;"></i>
+                           style="font-size: 35px;"></i>
                         <span>courses</span>
                     </a>
                 </li>
@@ -88,7 +90,7 @@
                        class="widgets">
 
                         <i class='fas fa-user-graduate'
-                           style='font-size:38px'></i>
+                           style='font-size:35px'></i>
                         <span>Students</span>
                         <div class="dots"></div>
                     </a>
