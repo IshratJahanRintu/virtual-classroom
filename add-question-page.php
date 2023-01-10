@@ -1,8 +1,8 @@
 <?php
 
 if (isset($_GET['exam_id'])) {
-    echo $exam_id = $_GET['exam_id'];
-    echo $total_question = $_GET['total_question'];
+    $exam_id = $_GET['exam_id'];
+    $total_question = $_GET['total_question'];
     include_once 'teacher-navbar.php';
 
 

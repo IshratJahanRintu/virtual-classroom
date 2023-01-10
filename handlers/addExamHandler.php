@@ -19,7 +19,7 @@ if (isset($_POST['add_exam'])) {
     echo $exam_info["total_questions"] = $_POST['total_question'];
     echo $exam_info["start"] = $_POST['start'];
     echo $exam_info["end"] = $_POST['end'];
-    echo $exam_info["date"] = $_POST['date'];
+
 
 
 

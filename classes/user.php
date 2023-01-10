@@ -115,4 +115,10 @@ class user
         $stmnt->execute() or die("update query failed");
         return true;
     }
+
+    public function viewSemester($student_info)
+    {
+        $row = $this->db->fetch_data_with_one_column_check($student_info, $this->table, "user_id");
+        return $row[0]['semester'];
+    }
 }

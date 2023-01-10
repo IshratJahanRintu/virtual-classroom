@@ -503,3 +503,15 @@ section {
     font-size: 3rem;
   }
 }
+
+
+span.marks {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 1.7rem;
+}

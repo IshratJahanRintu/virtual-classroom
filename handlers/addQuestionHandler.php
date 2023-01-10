@@ -1,6 +1,7 @@
 <?php
 
 include_once '../Database.php';
+
 $db = Database::getInstance();
 
 if (isset($_POST['question'])) {
@@ -14,10 +15,13 @@ if (isset($_POST['question'])) {
         $question_info['option4'] = $question[$i + 4];
         $question_info['ans'] = $question[$i + 5];
         $question_info['exam_id'] = $question[$i + 6];
+
+
         $db->insert("question", $question_info);
-        echo ("quesion $i+1 inserter");
+
         $i = $i + 7;
     }
+    header("location:../teacher-exam-list.php");
 } else {
     header("location:../loginpage.php");
 }

@@ -65,4 +65,9 @@ class course
     {
         return $this->db->fetch_data_with_one_column_check($teacher_info, $this->table, "teacher_id");
     }
+
+    public function viewSpecificSemesterCourses($student_info)
+    {
+        return $this->db->fetch_data_with_one_column_check($student_info, $this->table, "semester");
+    }
 }
