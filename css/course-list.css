@@ -1,0 +1,32 @@
+.course-list {
+  display: flex;
+
+  border-bottom: 1px solid rgb(217, 216, 216);
+  margin: auto 3rem;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 3px;
+}
+
+.course-list:hover {
+  background-color: rgb(233, 235, 238);
+  box-shadow: 1px 5px 5px 3px #dfe1e3;
+}
+
+.course-name,
+.view-course {
+  font-size: 20px;
+}
+
+.course-name {
+  padding: 3rem;
+  flex: 2;
+  height: 100%;
+  font-weight: 600;
+}
+
+.view-course {
+  padding: 3rem;
+  flex: 1;
+  text-align: center;
+}

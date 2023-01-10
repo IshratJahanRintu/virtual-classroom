@@ -28,15 +28,25 @@ include_once 'classes/exam.php';
     <div class="table-responsive">
         <div class="table-wrapper">
             <div class="table-title">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h2>Your <b>Courses</b></h2>
-                    </div>
 
-                </div>
+
+                <h2>Your <b>Courses</b></h2>
+
+
+
+
+
             </div>
 
-
+            <div class="course-list">
+                <div class="course-name">course names</div>
+                <div class="view-course">view course</div>
+            </div>
+            <div class="course-list">
+                <div class="course-name">course names</div>
+                <div class="view-course"><i style=" font-size: 25px;"
+                       class="zmdi zmdi-open-in-new"></i></div>
+            </div>
 
         </div>
     </div>
