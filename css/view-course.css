@@ -1,0 +1,123 @@
+.course-navbar {
+  box-shadow: 0px 3px 5px #dee2e6;
+  padding: 1rem 1.5rem;
+}
+
+.course-navbar ul {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+.course-navbar ul li {
+  text-decoration: none;
+  background-color: #d9d6d6;
+  margin: 10px;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  font-size: 17px;
+  list-style: none;
+}
+.course-navbar ul li:hover {
+  background-color: #b7b6b6;
+}
+.course-navbar ul li a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+/*** notice **********/
+
+.notice-header {
+  color: #374c59;
+  line-height: 2;
+  font-size: 1.8em;
+  font-weight: bolder;
+  margin-bottom: 1vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.2vh 28px 0;
+  border-bottom: 1px solid #d3d3d3;
+}
+.notice-header .notice-btn-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+}
+.notice-btn {
+  border: none;
+  font-size: -0.15em;
+  font-weight: 500;
+  border-radius: 3px;
+  color: #fff;
+  background: #452c63;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 13px;
+  cursor: pointer;
+  width: -webkit-max-content;
+  width: max-content;
+  font-size: 17px;
+}
+.notice-btn:focus {
+  outline: none;
+}
+.notice-card {
+  background: #f8f5f5;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  min-height: 11vh;
+  padding: 13px 26px;
+  margin: 12px 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.notice-card-left {
+  display: flex;
+  flex-basis: 80%;
+  padding: 1em;
+  border-radius: 0.2em;
+  line-height: 0.8em;
+  font-size: 16px;
+  /* text-align: center; */
+  vertical-align: middle;
+  /* justify-content: center; */
+  /* justify-items: center; */
+  align-items: center;
+  background: #eee;
+}
+.notice-card-right {
+  flex-basis: 20%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  padding: 1em;
+}
+.notice-card-right i {
+  color: #062030;
+  background: #eee;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+  padding: 8px 16px;
+  margin: 5px;
+  line-height: 0.8em;
+  font-size: 20px;
+}
+.sub-txt {
+  /* display: flex; */
+  align-items: flex-end;
+  margin-top: 6px;
+  text-align: right;
+  width: 100%;
+  word-wrap: break-word;
+  font-size: 0.8em;
+  color: #374c59;
+  opacity: 0.8;
+  padding: 1em auto 0em;
+  padding: 8px 8px 0px;
+}
