@@ -71,10 +71,11 @@
   border-radius: 4px;
   min-height: 11vh;
   padding: 13px 26px;
-  margin: 12px 16px;
+  margin: 12px auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 80%;
 }
 .notice-card-left {
   display: flex;

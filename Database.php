@@ -34,7 +34,7 @@ class Database
     function fetch_all_data($table)
     {
 
-        $sql = "select * from ${table}";
+        $sql = "select * from $table";
 
 
 
