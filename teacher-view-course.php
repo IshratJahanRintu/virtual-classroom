@@ -6,7 +6,7 @@ if (isset($_GET['course_id'])) {
     $course_id = $_GET['course_id'];
     echo $_SESSION['course_id'] = $_GET['course_id'];
 ?>
-
+<div class="course-whole-container">
     <nav class="course-navbar">
         <ul>
             <li style="background-color: #452c63; color:white"><a href="teacher-view-course.php">summary </a> </li>
@@ -17,5 +17,5 @@ if (isset($_GET['course_id'])) {
             <li>Exams</li>
         </ul>
     </nav>
-
+</div>
 <?php } ?>
