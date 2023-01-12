@@ -26,7 +26,7 @@ class notice
     public function deleteNotice($where)
     {
 
-        $sql = "DELETE FROM $this->table WHERE notce_id={$where}";
+        $sql = "DELETE FROM $this->table WHERE notice_id={$where}";
         $statement = $this->db->connection->prepare($sql);
         $statement->execute();
         if ($statement->execute()) {
@@ -38,13 +38,13 @@ class notice
         }
     }
 
-    // public function editEourse($edit_info = array())
-    // {
-    //     $update_query =  "UPDATE $this->table SET  topic='{$edit_info["topic"]}',teacher_id='{$edit_info["teacher_id"]}',semester='{$edit_info["semester"]}' WHERE course_id={$edit_info["course_id"]}";
-    //     $stmnt = $this->db->connection->prepare($update_query);
-    //     $stmnt->execute() or die("update query failed");
-    //     return true;
-    // }
+    public function editNotice($edit_info = array())
+    {
+        $update_query =  "UPDATE $this->table SET  notice_desc='{$edit_info["notice_desc"]}' WHERE notice_id={$edit_info["notice_id"]}";
+        $stmnt = $this->db->connection->prepare($update_query);
+        $stmnt->execute() or die("update query failed");
+        return true;
+    }
 
     public function viewAllNotices()
     {

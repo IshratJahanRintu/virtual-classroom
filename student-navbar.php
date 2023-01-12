@@ -46,6 +46,8 @@
         <link rel="stylesheet"
               href="css/teacher-exam.css" />
 
+        <link rel="stylesheet"
+              href="css/video-page.css" />
 
         <link rel="stylesheet"
               href="https://anandchowdhary.github.io/ionicons-3-cdn/icons.css"

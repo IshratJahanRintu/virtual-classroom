@@ -11,7 +11,7 @@
  <script src="js/teacher-list.js"></script>
  <script src="js/course-list.js"></script>
  <script src="js/exam-list.js"></script>
-
+ <script src="js/announcement-list.js"></script>
  <script src="js/phone.js"></script>
  <script src="js/question-form.js"></script>
  </body>
