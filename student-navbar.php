@@ -29,12 +29,13 @@
               href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
         <!-- custom css file link  -->
         <link rel="stylesheet"
               href="css/question-form.css">
-        <link rel="stylesheet"
-              href="css/student-list.css">
+
         <link rel="stylesheet"
               href="css/addform.css">
         <link rel="stylesheet"
@@ -56,7 +57,8 @@
 
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
               rel="stylesheet">
-
+        <link rel="stylesheet"
+              href="css/view-course.css">
 
     </head>
 

@@ -18,8 +18,8 @@ if (isset($_SESSION['course_id'])) {
         <nav class="course-navbar">
             <ul>
                 <li><a href="teacher-view-course.php?course_id=<?php echo $course_id; ?>">summary </a> </li>
-                <li style=" background-color: #452c63; color:white"><a href="announcement-page.php">Announcement</a></li>
-                <li>Course Materials</li>
+                <li class="active-list"><a href="announcement-page.php">Announcement</a></li>
+                <li><a href="teacher-course-materials.php"> Course Materials</a></li>
                 <li>Assignments</li>
                 <li>Students</li>
                 <li>Exams</li>

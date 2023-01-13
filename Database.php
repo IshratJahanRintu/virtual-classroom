@@ -49,7 +49,7 @@ class Database
     {
 
         $row = array();
-        $sql = "select * from ${table} Where ${col1}=? and ${col2}=?";
+        $sql = "select * from $table Where $col1=? and $col2=?";
 
         $statement = $this->connection->prepare($sql);
         $statement->execute([$data_array[$col1], $data_array[$col2]]);

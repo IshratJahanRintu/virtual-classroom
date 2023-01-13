@@ -90,4 +90,10 @@ class exam
         $exam_info['exam_id'] = $exam_id;
         return count($this->db->fetch_data_with_one_column_check($exam_info, "question", "exam_id"));
     }
+
+    public function viewSpecificExamQuestions($exam_id)
+    {
+        $exam_info['exam_id'] = $exam_id;
+        return $this->db->fetch_data_with_one_column_check($exam_info, "question", "exam_id");
+    }
 }

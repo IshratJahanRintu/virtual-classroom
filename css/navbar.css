@@ -227,3 +227,10 @@ a {
     transform: translate(256px, -234px);
   }
 }
+
+
+nav.menu {
+    z-index: 1200;
+    top: 0;
+    position: sticky;
+}
