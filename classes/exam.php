@@ -96,4 +96,45 @@ class exam
         $exam_info['exam_id'] = $exam_id;
         return $this->db->fetch_data_with_one_column_check($exam_info, "question", "exam_id");
     }
+    public function examMark($exam_id)
+
+    {
+        $exam_info['exam_id'] = $exam_id;
+
+        $found_row = $this->db->fetch_data_with_one_column_check($exam_info, $this->table, "exam_id");
+
+        if (count($found_row) > 0) {
+
+            return $found_row[0]['marks_per_qn'];
+        }
+        # code...
+    }
+
+    public function addHistory($history_info)
+    {
+        if ($this->db->insert("exam_history", $history_info)) {
+
+            return true;
+        }
+    }
+
+    public function examCourse($exam_id)
+
+    {
+        $exam_info['exam_id'] = $exam_id;
+
+        $found_row = $this->db->fetch_data_with_one_column_check($exam_info, $this->table, "exam_id");
+
+        if (count($found_row) > 0) {
+
+            return $found_row[0]['course_id'];
+        }
+        # code...
+    }
+
+    public function examTaken($exam_info)
+    {
+        return ((count($this->db->fetch_data_with_two_column_check($exam_info, "exam_history", "exam_id", "student_id"))) > 0);
+        # code...
+    }
 }

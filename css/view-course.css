@@ -94,6 +94,7 @@
   width: -webkit-max-content;
   width: max-content;
   font-size: 17px;
+  margin: 5px;
 }
 .notice-btn:focus {
   outline: none;

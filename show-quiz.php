@@ -84,51 +84,71 @@ if (isset($_GET['exam_id'])) {
 
 
 
-        <form method="post" id="form1" action="answer.php">
+        <form method="post"
+              id="form1"
+              action="answer.php">
             <?php
             $i = 1;
             foreach ($question_list as $ques) { ?>
 
-                <table style="margin:30px auto;" class=" table table-bordered border-dark">
-                    <thead>
-                        <tr class="info">
-                            <th><?php echo $i; ?><?php echo $ques['question']; ?> </th>
-                        </tr>
-                    </thead>
-                    <tbody>
+            <table style="margin:30px auto;"
+                   class=" table table-bordered border-dark">
+                <thead>
+                    <tr class="info">
+                        <th><?php echo $i; ?><?php echo $ques['question']; ?> </th>
+                    </tr>
+                </thead>
+                <tbody>
 
-                        <tr>
-                            <td><?php echo $ques['option1']; ?><input type="radio" value="1" name="<?php echo $ques['question_id']; ?>" />
-                            </td>
-                        </tr>
+                    <tr>
+                        <td><?php echo $ques['option1']; ?><input type="radio"
+                                   value="1"
+                                   name="<?php echo $ques['question_id']; ?>" />
+                        </td>
+                    </tr>
 
-                        <tr>
-                            <td><input type="radio" value="2" name="<?php echo $ques['question_id']; ?>"><?php echo $ques['option2']; ?></input>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td><input type="radio"
+                                   value="2"
+                                   name="<?php echo $ques['question_id']; ?>"><?php echo $ques['option2']; ?></input>
+                        </td>
+                    </tr>
 
-                        <tr>
-                            <td><input type="radio" value="3" name="<?php echo $ques['question_id']; ?>" /><?php echo $ques['option3']; ?></td>
-                        </tr>
-
-
-                        <tr>
-                            <td><input type="radio" value="4" name="<?php $ques['question_id']; ?>" /><?php echo $ques['option4']; ?></td>
-
-                        </tr>
+                    <tr>
+                        <td><input type="radio"
+                                   value="3"
+                                   name="<?php echo $ques['question_id']; ?>" /><?php echo $ques['option3']; ?></td>
+                    </tr>
 
 
-                        <input type="radio" checked="checked" style="display:none" value="0" name="<?php echo $ques['question_id']; ?>" />
+                    <tr>
+                        <td><input type="radio"
+                                   value="4"
+                                   name="<?php $ques['question_id']; ?>" /><?php echo $ques['option4']; ?></td>
 
-                        <input type="hidden" value="<?php echo $exam_id; ?>">
+                    </tr>
 
-                    </tbody>
-                </table>
+
+                    <input type="radio"
+                           checked="checked"
+                           style="display:none"
+                           value="0"
+                           name="<?php echo $ques['question_id']; ?>" />
+
+                    <input type="hidden"
+                           value="<?php echo $exam_id; ?> "
+                           name="exam_id">
+
+                </tbody>
+            </table>
             <?php
 
                 $i++;
             } ?>
-            <center><input type="submit" value="submit" class="notice-btn" name="answer" /></center>
+            <center><input type="submit"
+                       value="submit"
+                       class="notice-btn"
+                       name="answer" /></center>
         </form>
     </div>
     <div class="col-sm-2"></div>
