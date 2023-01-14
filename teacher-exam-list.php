@@ -52,15 +52,15 @@ if (count($course_list) > 0) {
             <h3 class="title"><?= $x['topic']; ?></h3>
             <?php if ($exam->questionExist($x['exam_id']) > 0) {
                         ?>
-            <button disabled
-                    class="option-btn"> <span style="font-size: 16px;">Question Added
+            <a href="teacher-result-page.php?exam_id=<?= $x['exam_id']; ?>"
+               class="option-btn"> <span style="font-size: 16px;">Question Added
                 </span></a>
-                <?php } else {
-                            ?>
-                <a href="add-question-page.php?exam_id=<?= $x['exam_id']; ?>&total_question=<?= $x['total_questions']; ?>"
-                   class="btn"> <span style="font-size: 16px;">Add Question
-                    </span></a>
-                <?php  } ?>
+            <?php } else {
+                        ?>
+            <a href="add-question-page.php?exam_id=<?= $x['exam_id']; ?>&total_question=<?= $x['total_questions']; ?>"
+               class="btn"> <span style="font-size: 16px;">Add Question
+                </span></a>
+            <?php  } ?>
         </div>
 
         <?php } ?>

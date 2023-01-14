@@ -25,7 +25,7 @@ if (isset($_SESSION['course_id'])) {
             <li><a href="teacher-course-materials.php"> Course Materials</a></li>
             <li>Assignments</li>
             <li><a href="teacher-course-students.php">Students</a></li>
-            <li>Exams</li>
+            <li><a href="teacher-result-page.php">Exams</a></li>
         </ul>
     </nav>
     <div class="course-main-content">
@@ -37,7 +37,60 @@ if (isset($_SESSION['course_id'])) {
             </div>
         </div>
 
+        <!-- add announcement modal -->
+        <div class="modal fade"
+             id="addNoticeModal"
+             tabindex="-1"
+             role="dialog"
+             aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog"
+                 role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">Announcement</h4>
+                        <button type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-3">
 
+
+
+                        <div class="md-form">
+                            <form action="handlers/addAnouncementHandler.php"
+                                  method="post">
+                                <i class="fas fa-pencil prefix grey-text"></i>
+                                <input type="hidden"
+                                       name="course_id"
+                                       value="<?php echo $course_id ?>">
+                                <textarea type=" text"
+                                          id="form8"
+                                          class="md-textarea form-control"
+                                          rows="6"
+                                          name="notice">
+                        </textarea>
+                                <label data-error="wrong"
+                                       data-success="right"
+                                       for="form8">Write the announcement</label>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <input type="submit"
+                               class="btn btn-unique"
+                               value="Create"
+                               name="add_notice"></form>
+                        <button class="btn btn-danger"
+                                data-dismiss="modal"
+                                value="">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <?php if (count($notice_list) > 0) {
 
@@ -57,7 +110,7 @@ if (isset($_SESSION['course_id'])) {
                    data-noticeid="<?php echo $n['notice_id'] ?>"> <i class="zmdi zmdi-delete"></i></a>
             </div>
 
-            <div class="sub-txt"><?php echo date('jS,F,Y', strtotime($n['time'])); ?></div>
+            <div class="sub-txt"><?php echo date('Y,F,jS', strtotime($n['time'])); ?></div>
         </div>
 
         <!-- Edit Modal HTML -->
@@ -116,60 +169,7 @@ if (isset($_SESSION['course_id'])) {
                 </div>
             </div>
         </div>
-        <!-- add announcement modal -->
-        <div class="modal fade"
-             id="addNoticeModal"
-             tabindex="-1"
-             role="dialog"
-             aria-labelledby="myModalLabel"
-             aria-hidden="true">
-            <div class="modal-dialog"
-                 role="document">
-                <div class="modal-content">
-                    <div class="modal-header text-center">
-                        <h4 class="modal-title w-100 font-weight-bold">Announcement</h4>
-                        <button type="button"
-                                class="close"
-                                data-dismiss="modal"
-                                aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body mx-3">
 
-
-
-                        <div class="md-form">
-                            <form action="handlers/addAnouncementHandler.php"
-                                  method="post">
-                                <i class="fas fa-pencil prefix grey-text"></i>
-                                <input type="hidden"
-                                       name="course_id"
-                                       value="<?php echo $course_id ?>">
-                                <textarea type=" text"
-                                          id="form8"
-                                          class="md-textarea form-control"
-                                          rows="6"
-                                          name="notice">
-                        </textarea>
-                                <label data-error="wrong"
-                                       data-success="right"
-                                       for="form8">Write the announcement</label>
-                        </div>
-
-                    </div>
-                    <div class="modal-footer d-flex justify-content-center">
-                        <input type="submit"
-                               class="btn btn-unique"
-                               value="Create"
-                               name="add_notice"></form>
-                        <button class="btn btn-danger"
-                                data-dismiss="modal"
-                                value="">Cancel</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- delete modal -->
         <div id="deleteNoticeModal"
              class="modal fade">
@@ -215,7 +215,7 @@ if (isset($_SESSION['course_id'])) {
         <?php
                 }
             } else {
-                echo "<h1>No announcement</h1>";
+                echo "<h1 class='empty'>No announcement</h1>";
             }
             ?>
 

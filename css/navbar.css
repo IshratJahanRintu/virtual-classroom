@@ -67,7 +67,7 @@ nav.menu {
   overflow: hidden;
   transition: background-color 100ms ease, box-shadow 150ms ease;
   transition-timing-function: cubic-bezier(0.57, 0.21, 0.69, 3.25);
-  font-size: 36px;
+  font-size: 30px;
 }
 .menu ol li a i {
   display: block;

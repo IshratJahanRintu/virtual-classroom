@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   /* min-height: 100%; */
-  background-color: #d9d6d6;
+  background-color: white;
   /* overflow: auto; */
   position: -webkit-sticky;
   position: sticky;
@@ -343,5 +343,30 @@
     opacity: 1;
   }
 }
+/*dashboard*/
+.playlist-videos .box-container .box span {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  right: 2rem;
+  height: 17rem;
+  border-radius: 1rem;
+  background-color: #05182dc4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7rem;
+  color: #fff;
+  display: none;
+  cursor: pointer;
+}
+.playlist-videos .box-container .box:hover span {
+  display: flex;
+}
 
-/* document section */
+.playlist-videos .box-container .box .total {
+  margin-top: 2.5rem;
+  font-size: 2.8rem;
+  text-align: center;
+  color: var(--black);
+}

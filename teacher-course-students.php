@@ -20,8 +20,8 @@ $student_list = $c->viewCourseStudents($course_id);
             <li><a href="announcement-page.php">Announcement</a></li>
             <li><a href="teacher-course-materials.php"> Course Materials</a></li>
             <li>Assignments</li>
-            <li class="active-list"><a href="teacher-course-students.php">Students</li>
-            <li>Exams</li>
+            <li class="active-list">Students</li>
+            <li><a href="teacher-course-exams.php"> Exams</a></li>
         </ul>
     </nav>
 

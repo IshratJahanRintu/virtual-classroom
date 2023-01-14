@@ -73,7 +73,7 @@
              center;
              justify-content:
              center;width:100%">
-            <ol style="grid-template-columns: repeat(4, 1fr);">
+            <ol style="grid-template-columns: repeat(5, 1fr);">
                 <li class="menu-item">
                     <a href="http://localhost/virtual-classroom/teacher-home-page.php"
                        class="home">
@@ -107,6 +107,14 @@
                         <i class="ion ion-ios-paper-outline"
                            style="font-size: 38px;"></i>
                         <span>Exams</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="logout.php"
+                       class="">
+                        <i class="zmdi zmdi-sign-in"
+                           style="font-size: 38px;"></i>
+                        <span>logout</span>
                     </a>
                 </li>
             </ol>

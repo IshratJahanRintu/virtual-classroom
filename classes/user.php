@@ -121,4 +121,17 @@ class user
         $row = $this->db->fetch_data_with_one_column_check($student_info, $this->table, "user_id");
         return $row[0]['semester'];
     }
+
+    public function getIndivudual($user_id)
+
+    {
+        $info['user_id'] = $user_id;
+
+        $found_row = $this->db->fetch_data_with_one_column_check($info, $this->table, "user_id");
+
+        if (count($found_row) > 0) {
+
+            return $found_row[0];
+        }
+    }
 }

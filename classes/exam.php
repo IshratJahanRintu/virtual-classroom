@@ -143,8 +143,18 @@ class exam
     }
     public function specificExamResult($exam_id)
     {
-        $exam_info['exam_id'] = $exam_id;
-        return   $this->db->fetch_data_with_one_column_check($exam_info, "exam_history", "exam_id");
+        $sql = "select *  from user LEFT JOIN exam_history  on exam_history.student_id=user.user_id
+            where exam_history.exam_id=$exam_id ORDER BY achieved_mark desc";
+
+        $result = array();
+
+        $statement = $this->db->connection->prepare($sql);
+        $statement->execute() or die("q fail");
+        while ($row = $statement->fetch()) {
+            $result[] = $row;
+        }
+
+        return $result;
         # code...
     }
     public function scificExamSingleResult($info)
@@ -168,5 +178,10 @@ class exam
 
         return $result;
         # code...
+    }
+    public function courseResult($course_id)
+    {
+        $course_info['course_id'] = $course_id;
+        return   $this->db->fetch_data_with_one_column_check($course_info, "exam_history", "course_id");
     }
 }
