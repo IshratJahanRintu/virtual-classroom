@@ -17,8 +17,7 @@ if (isset($_POST['add_exam'])) {
     echo $exam_info["course_id"] = $_POST['course_id'];
     echo $exam_info["marks_per_qn"] = $_POST['marks_per_question'];
     echo $exam_info["total_questions"] = $_POST['total_question'];
-    echo $exam_info["start"] = $_POST['start'];
-    echo $exam_info["end"] = $_POST['end'];
+
 
 
 

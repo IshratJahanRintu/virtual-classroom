@@ -31,7 +31,14 @@
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
         <link rel="stylesheet"
               href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet"
+              href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
 
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://cdn.datatables.net/1.10.15/css/dataTables.jqueryui.min.css" />
         <!-- custom css file link  -->
         <link rel="stylesheet"
               href="css/question-form.css">
@@ -107,7 +114,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="http://localhost/virtual-classroom/result-list.php"
+                    <a href="http://localhost/virtual-classroom/student-result-page.php"
                        class="contact">
                         <i class="zmdi zmdi-star-circle"
                            style="font-size: 38px;"></i>

@@ -23,12 +23,23 @@
   z-index: 100;
 }
 
+.course-heading {
+  color: #452c63;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .course-navbar ul {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   text-decoration: none;
-  padding-top: 46px;
+  padding-top: 28px;
   /* height: 100%; */
   margin-right: 10px;
   position: sticky;

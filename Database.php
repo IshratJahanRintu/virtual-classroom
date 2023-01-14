@@ -65,7 +65,7 @@ class Database
         // echo "$data_array[$col]";
 
         $row = array();
-        $sql = "select * from ${table} Where ${col}=?";
+        $sql = "select * from $table Where $col=? ORDER BY $col desc";
 
         $statement = $this->connection->prepare($sql);
         $statement->execute([$data_array[$col]]);

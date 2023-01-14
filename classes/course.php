@@ -11,9 +11,18 @@ class course
     }
 
 
+    public function getCourseInfo($info_type, $course_id)
 
+    {
+        $info['course_id'] = $course_id;
 
+        $found_row = $this->db->fetch_data_with_one_column_check($info, $this->table, "course_id");
 
+        if (count($found_row) > 0) {
+
+            return $found_row[0]["$info_type"];
+        }
+    }
     function addCourse($course_info)
     {
 
@@ -69,5 +78,18 @@ class course
     public function viewSpecificSemesterCourses($student_info)
     {
         return $this->db->fetch_data_with_one_column_check($student_info, $this->table, "semester");
+    }
+    public function viewCourseStudents($course_id)
+    {
+        $sql = "select course.semester,user.name,user.contact_no,user.email from user LEFT JOIN course on user.semester=course.semester 
+        where course_id=$course_id";
+
+
+
+        $statement = $this->db->connection->prepare($sql);
+        $statement->execute();
+        $row = $statement->fetchAll();
+        return $row;
+        # code...
     }
 }

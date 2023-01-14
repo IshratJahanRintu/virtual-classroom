@@ -67,10 +67,10 @@ if (isset($_GET['exam_id'])) {
 
 
 
-<div class="container">
+<div class="container-md">
 
     <div class="col-sm-8">
-        <h2>QUIZ</h2>
+        <h1 class="heading">QUIZ</h1>
         <!-- <script type="text/javascript">
                 var timeLeft = 2 * 60;
             </script>
@@ -95,48 +95,49 @@ if (isset($_GET['exam_id'])) {
                    class=" table table-bordered border-dark">
                 <thead>
                     <tr class="info">
-                        <th><?php echo $i; ?><?php echo $ques['question']; ?> </th>
+                        <th><?php echo "Question " . $i . ". "; ?><?php echo $ques['question']; ?> </th>
                     </tr>
                 </thead>
                 <tbody>
 
                     <tr>
-                        <td><?php echo $ques['option1']; ?><input type="radio"
+                        <td><input type="radio"
                                    value="1"
-                                   name="<?php echo $ques['question_id']; ?>" />
+                                   name="<?php echo $ques['question_id']; ?>"><label><?php echo $ques['option1']; ?></label>
                         </td>
                     </tr>
 
                     <tr>
                         <td><input type="radio"
                                    value="2"
-                                   name="<?php echo $ques['question_id']; ?>"><?php echo $ques['option2']; ?></input>
+                                   name="<?php echo $ques['question_id']; ?>"><label
+                                   for=""><?php echo $ques['option2']; ?></label>
                         </td>
                     </tr>
 
                     <tr>
                         <td><input type="radio"
                                    value="3"
-                                   name="<?php echo $ques['question_id']; ?>" /><?php echo $ques['option3']; ?></td>
+                                   name="<?php echo $ques['question_id']; ?>"><label><?php echo $ques['option3']; ?></label>
+                        </td>
                     </tr>
-
-
                     <tr>
-                        <td><input type="radio"
-                                   value="4"
-                                   name="<?php $ques['question_id']; ?>" /><?php echo $ques['option4']; ?></td>
-
+                        <td>
+                            <div class="option"><input type="radio"
+                                       id="option4"
+                                       value="4"
+                                       name="<?php echo $ques['question_id']; ?>"><label><?php echo $ques['option4']; ?></label>
+                            </div>
+                        </td>
                     </tr>
 
 
-                    <input type="radio"
-                           checked="checked"
-                           style="display:none"
-                           value="0"
-                           name="<?php echo $ques['question_id']; ?>" />
+
+
+
 
                     <input type="hidden"
-                           value="<?php echo $exam_id; ?> "
+                           value="<?php echo $exam_id; ?>"
                            name="exam_id">
 
                 </tbody>

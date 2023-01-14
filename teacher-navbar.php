@@ -90,7 +90,7 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#0"
+                    <a href="http://localhost/virtual-classroom/teacher-student-list.php"
                        class="widgets">
 
                         <i class='fas fa-user-graduate'
@@ -98,12 +98,7 @@
                         <span>Students</span>
                         <div class="dots"></div>
                     </a>
-                    <ol class="sub-menu">
-                        <li class="menu-item item--a"><a href="http://localhost/virtual-classroom/student-list.php"
-                               class="item--a"><span>Student list</span></a></li>
 
-
-                    </ol>
                 </li>
 
                 <li class="menu-item">

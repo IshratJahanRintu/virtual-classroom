@@ -49,10 +49,7 @@ if (count($course_list) > 0) {
             <div class="tutor">
 
                 <div class="info">
-                    <h3><?php echo date('jS,F,Y', strtotime($x['start'])); ?></h3>
-                    <span>Time:
-                        <?php echo date(' g:i A', strtotime($x['start'])); ?>
-                    </span>
+
 
                 </div>
             </div>
@@ -75,7 +72,7 @@ if (count($course_list) > 0) {
                 </span></a>
             <?php } else {
                             ?>
-            <a href="#"
+            <a href="student-result-page.php?exam_id=<?= $x['exam_id']; ?>"
                class="notice-btn btn-info"> <span style="font-size: 16px;">See result
                 </span></a>
             <a href="#"

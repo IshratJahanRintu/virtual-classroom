@@ -40,49 +40,27 @@ if (count($course_list) > 0) {
                 foreach ($course_exams as $x) { ?>
 
         <div class="box">
-            <div class="tutor">
 
-                <div class="info">
-                    <h3><?php echo date('jS,F,Y', strtotime($x['start'])); ?></h3>
-                    <span>Time:
-                        <?php echo date(' g:i A', strtotime($x['start'])); ?>
-                    </span>
-
-                </div>
-            </div>
             <div class="thumb">
                 <i class="ion ion-ios-paper-outline"
                    style="font-size: 7rem; color: white; text-align: center"
                    aria-hidden="true"></i>
 
-                <span> <a href="#"><i title="Edit Exam"
-                           class=" zmdi zmdi-border-color"></i></a> <a href="#"><i title="Delete Exam"
-                           style="color: red;
-    margin-left: 6px;
-    font-size: 18px;"
-                           class="zmdi zmdi-delete"></i></a></span>
-                <span style="top: 0.5rem;
-  position: absolute;
-  left: auto;
-  right: 0.5rem;
+                <span> <?= $x['total_questions'] * $x['marks_per_qn']; ?> Markrs</span>
 
-  background-color: transparent;
-  font-size: 1.5rem;"><?= $x['total_questions'] * $x['marks_per_qn']; ?> Markrs</span>
             </div>
             <h3 class="title"><?= $x['topic']; ?></h3>
             <?php if ($exam->questionExist($x['exam_id']) > 0) {
                         ?>
-            <a href="#"
-               class="option-btn"><i class="zmdi zmdi-edit"
-                   style="font-size: 18px;"></i> <span style="font-size: 16px;">Edit Question
+            <button disabled
+                    class="option-btn"> <span style="font-size: 16px;">Question Added
                 </span></a>
-            <?php } else {
-                        ?>
-            <a href="add-question-page.php?exam_id=<?= $x['exam_id']; ?>&total_question=<?= $x['total_questions']; ?>"
-               class="btn"><i style="font-size: 18px; margin-right:4px"
-                   class="material-icons">&#xE147;</i> <span style="font-size: 16px;">Add Question
-                </span></a>
-            <?php  } ?>
+                <?php } else {
+                            ?>
+                <a href="add-question-page.php?exam_id=<?= $x['exam_id']; ?>&total_question=<?= $x['total_questions']; ?>"
+                   class="btn"> <span style="font-size: 16px;">Add Question
+                    </span></a>
+                <?php  } ?>
         </div>
 
         <?php } ?>
@@ -93,7 +71,7 @@ if (count($course_list) > 0) {
 
                 </div>
             </div>
-            <div style=" background-color:transparent; border:2px solid #024368;box-shadow:none; height:25.5rem;"
+            <div style=" background-color:transparent; border:2px solid #024368;box-shadow:none; height:22.5rem;"
                  class="thumb">
                 <a href="#addExamModal"
                    data-toggle="modal"
@@ -145,24 +123,8 @@ if (count($course_list) > 0) {
                                        required>
                                 <i class="zmdi zmdi-collection-item"></i>
                             </div>
-                            <div class="form-wrapper">
-                                <p><label>Enter Starting Time</label></p>
-                                <input type="datetime-local"
-                                       name="start"
-                                       placeholder="Start time"
-                                       class="form-control"
-                                       required>
 
-                            </div>
-                            <div class="form-wrapper">
-                                <p><label>Enter Ending Time</label></p>
-                                <input type="datetime-local"
-                                       name="end"
-                                       placeholder="Start time"
-                                       class="form-control"
-                                       required>
 
-                            </div>
 
                             <input type="hidden"
                                    value=""

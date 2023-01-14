@@ -23,20 +23,7 @@ class exam
     }
 
 
-    public function deleteExam($where)
-    {
 
-        $sql = "DELETE FROM $this->table WHERE exam_id={$where}";
-        $statement = $this->db->connection->prepare($sql);
-        $statement->execute();
-        if ($statement->execute()) {
-
-            return true;
-        } else {
-
-            return false;
-        }
-    }
 
     // public function editEourse($edit_info = array())
     // {
@@ -132,9 +119,54 @@ class exam
         # code...
     }
 
+    public function examTopic($exam_id)
+
+    {
+        $exam_info['exam_id'] = $exam_id;
+
+        $found_row = $this->db->fetch_data_with_one_column_check($exam_info, $this->table, "exam_id");
+
+        if (count($found_row) > 0) {
+
+            return $found_row[0]['topic'];
+        }
+        # code...
+    }
+
+
+
+
     public function examTaken($exam_info)
     {
         return ((count($this->db->fetch_data_with_two_column_check($exam_info, "exam_history", "exam_id", "student_id"))) > 0);
+        # code...
+    }
+    public function specificExamResult($exam_id)
+    {
+        $exam_info['exam_id'] = $exam_id;
+        return   $this->db->fetch_data_with_one_column_check($exam_info, "exam_history", "exam_id");
+        # code...
+    }
+    public function scificExamSingleResult($info)
+    {
+        return  $this->db->fetch_data_with_two_column_check($info, "exam_history", "exam_id", "student_id");
+        # code...
+    }
+
+    public function specificStudentResult($info)
+    {
+        $sql = "select *  from exam_history LEFT JOIN exams on exam_history.exam_id=exams.exam_id 
+            where exam_history.student_id={$info["student_id"]}";
+
+
+
+        $statement = $this->db->connection->prepare($sql);
+        $statement->execute();
+        while ($row = $statement->fetch()) {
+            $result[] = $row;
+        }
+
+        return $result;
         # code...
     }
 }

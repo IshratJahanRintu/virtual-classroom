@@ -43,6 +43,11 @@ a {
     /* left: 0px; */
   }
 }
+nav.menu {
+  z-index: 600;
+  top: 0;
+  position: sticky;
+}
 .menu ol li {
   position: relative;
   /* width: 162px; */
@@ -226,11 +231,4 @@ a {
   .menu ol li:hover .sub-menu {
     transform: translate(256px, -234px);
   }
-}
-
-
-nav.menu {
-    z-index: 1200;
-    top: 0;
-    position: sticky;
 }

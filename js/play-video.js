@@ -9,8 +9,8 @@ $(document).ready(function () {
     document.getElementById("tutorial").src = source;
   });
 
-  $("#deleteStudentModal").on("show.bs.modal", function (e) {
-    let userid = $(e.relatedTarget).data("userid");
-    $(e.currentTarget).find('input[name="user_id"]').val(userid);
-  });
+  // $("#deleteStudentModal").on("show.bs.modal", function (e) {
+  //   let userid = $(e.relatedTarget).data("userid");
+  //   $(e.currentTarget).find('input[name="user_id"]').val(userid);
+  // });
 });

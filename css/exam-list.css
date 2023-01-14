@@ -1,11 +1,10 @@
-.Running {
-  color: rgb(50, 205, 50);
+.exam-row {
+  font-size: 18px;
+  color: rgb(43, 15, 69);
+  font-weight: 700;
 }
 
-.upcoming {
-  color: orange;
-}
-
-.completed {
-  color: darkblue;
+.option {
+  display: flex;
+  background-color: aquamarine;
 }
