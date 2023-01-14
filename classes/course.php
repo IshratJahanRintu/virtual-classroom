@@ -92,4 +92,17 @@ class course
         return $row;
         # code...
     }
+
+    public function getIndividual($course_id)
+
+    {
+        $info['course_id'] = $course_id;
+
+        $found_row = $this->db->fetch_data_with_one_column_check($info, $this->table, "course_id");
+
+        if (count($found_row) > 0) {
+
+            return $found_row[0];
+        }
+    }
 }

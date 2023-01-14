@@ -100,6 +100,7 @@ if (isset($_SESSION['course_id'])) {
         <div class="notice-card">
             <div class="notice-card-left"><?= $n['notice_desc'] ?> </div>
             <div class="notice-card-right">
+
                 <a href="#editNoticeModal"
                    data-toggle="modal"
                    data-notice="<?php echo $n['notice_desc'] ?>"

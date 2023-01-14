@@ -14,25 +14,12 @@ if (isset($_SESSION['user_id']) && $_SESSION['user_type'] == "teacher") {
         $exam_id = $info['exam_id'];
         $table_title = $exam->examTopic($exam_id) . "Exam Results";
         $result_list = $exam->specificExamResult($exam_id);
-    } else if (isset($_GET['course_id'])) {
-?>
-<nav class="course-navbar">
-    <ul>
-        <div class="course-heading"><?= $course_title ?></div>
-        <li style="background-color: #452c63; color:white"><a href="teacher-view-course.php">summary </a> </li>
-        <li><a href="announcement-page.php">Announcement</a></li>
-        <li><a href="teacher-course-materials.php"> Course Materials</a></li>
-        <li>Assignments</li>
-        <li><a href="teacher-course-students.php">Students</li>
-        <li>Exams</li>
-    </ul>
-</nav>
-
-<?php
-    } else {
-        header("location:teacher-course-list.php");
     }
-    ?>
+
+?>
+
+
+
 
 
 
@@ -76,7 +63,7 @@ if (isset($_SESSION['user_id']) && $_SESSION['user_type'] == "teacher") {
 
 <?php
     } else {
-        echo "<h1>No result found</h1>";
+        echo "<h1 class='empty'>No result found</h1>";
     }
 } else {
     header("location:loginpage.php");

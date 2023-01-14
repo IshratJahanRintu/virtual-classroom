@@ -21,50 +21,17 @@ if (isset($_SESSION["course_id"])) {
     <nav class="course-navbar">
         <ul>
             <div class="course-heading"><?= $course_title ?></div>
-            <li><a href="teacher-view-course.php?course_id=<?= $course_id; ?>">summary </a> </li>
-            <li><a href="announcement-page.php">Announcement</a></li>
-            <li class="active-list"><a href="teacher-course-materials.php">Course Materials</a></li>
+            <li><a href="student-view-course.php?course_id=<?= $course_id; ?>">summary </a> </li>
+            <li><a href="student-notice-page.php">Announcement</a></li>
+            <li class="active-list"><a href="student-course-materials.php">Course Materials</a></li>
             <li>Assignments</li>
-            <li><a href="teacher-course-students.php">Students</a></li>
-            <li><a href="teacher-course-exams.php">Exams</a></li>
+
+            <li><a href="student-exam-list.php?course_id=<?= $course_id; ?>">Exams</a></li>
         </ul>
     </nav>
 
     <div class="course-main-content">
 
-        <section class="add-content">
-            <h1 class="heading">Add content</h1>
-            <div class="add-form">
-                <div class="drop-zone">
-                    <form enctype="multipart/form-data"
-                          action="handlers/addContentHandler.php"
-                          method="post">
-                        <span class="drop-zone__prompt">Drop file here or click to upload</span>
-                        <input id="content-file"
-                               type="file"
-                               required
-                               name="content_file"
-                               accept="video/*, .doc , .docx , .ppt , .pptx, .pdf"
-                               class="drop-zone__input">
-
-
-                </div>
-                <div class="content-info">
-
-                    <textarea required
-                              name="content_topic"
-                              placeholder="Write the topic"
-                              rows="5"></textarea>
-                    <input class="notice-btn"
-                           name="add_content"
-                           type="submit"
-                           value="Upload">
-
-                </div>
-                </form>
-            </div>
-
-        </section>
 
 
         <section class="playlist-videos">

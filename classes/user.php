@@ -122,7 +122,7 @@ class user
         return $row[0]['semester'];
     }
 
-    public function getIndivudual($user_id)
+    public function getIndividual($user_id)
 
     {
         $info['user_id'] = $user_id;

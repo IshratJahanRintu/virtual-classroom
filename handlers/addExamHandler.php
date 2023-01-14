@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 include_once '../Database.php';
 
@@ -30,7 +30,13 @@ if (isset($_POST['add_exam'])) {
     $a = new exam();
     if ($a->addExam($exam_info)) {
         $_SESSION['message'] = "exam added successfully!";
-        header("Location:../teacher-exam-list.php");
+        if (isset($_GET['course'])) {
+
+
+            header("location:../teacher-course-exams.php");
+        } else {
+            header("Location:../teacher-exam-list.php");
+        }
     } else {
         $_SESSION['message'] = "Course  could not be added!";
 

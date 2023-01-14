@@ -53,7 +53,7 @@ if (count($course_list) > 0) {
             <?php if ($exam->questionExist($x['exam_id']) > 0) {
                         ?>
             <a href="teacher-result-page.php?exam_id=<?= $x['exam_id']; ?>"
-               class="option-btn"> <span style="font-size: 16px;">Question Added
+               class="option-btn"> <span style="font-size: 16px;">See Result
                 </span></a>
             <?php } else {
                         ?>

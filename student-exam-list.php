@@ -18,8 +18,12 @@ $exam = new exam();
 $student = new user("student");
 $student_info['user_id'] = $_SESSION['user_id'];
 $student_info['semester'] = $student->viewSemester($student_info);
-$course_list = $course->viewSpecificSemesterCourses($student_info);
-$exam_ifo['student_id'] = $_SESSION['user_id'];
+if (isset($_GET['course_id'])) {
+    $course_list[] = $course->getIndividual($_GET['course_id']);
+} else {
+    $course_list = $course->viewSpecificSemesterCourses($student_info);
+}
+$exam_info['student_id'] = $_SESSION['user_id'];
 
 
 if (count($course_list) > 0) {
@@ -42,7 +46,7 @@ if (count($course_list) > 0) {
         <?php $course_exams = $exam->viewSpecificCourseExams($c);
                 foreach ($course_exams as $x) {
                     if ($exam->questionExist($x["exam_id"])) {
-                        $exam_ifo['exam_id'] = $x["exam_id"];
+                        $exam_info['exam_id'] = $x["exam_id"];
                 ?>
 
         <div class="box">
@@ -65,7 +69,7 @@ if (count($course_list) > 0) {
                     Markrs</span>
             </div>
             <h3 class="title"><?= $x['topic']; ?></h3>
-            <?php if (!$exam->examTaken($exam_ifo)) {
+            <?php if (!$exam->examTaken($exam_info)) {
                             ?>
             <a href="show-quiz.php?exam_id=<?= $x['exam_id']; ?>"
                class="notice-btn btn-info"> <span style="font-size: 16px;">Start

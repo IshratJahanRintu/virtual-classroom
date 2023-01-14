@@ -15,7 +15,7 @@ if (isset($_SESSION)) {
         $content = new content();
         $notice = new notice();
         $user = new user("teacher");
-        $u = $user->getIndivudual($_SESSION['user_id']);
+        $u = $user->getIndividual($_SESSION['user_id']);
         $userName = $u['name'];
         $total_students = 0;
         $total_exams = 0;

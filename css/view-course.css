@@ -13,7 +13,7 @@
   padding: 1rem 0rem;
   display: flex;
   flex-direction: column;
-  /* min-height: 100%; */
+  min-height: 100%;
   background-color: white;
   /* overflow: auto; */
   position: -webkit-sticky;
@@ -32,6 +32,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  border: 2px dotted;
 }
 
 .course-navbar ul {
@@ -366,7 +367,7 @@
 
 .playlist-videos .box-container .box .total {
   margin-top: 2.5rem;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   text-align: center;
   color: var(--black);
 }

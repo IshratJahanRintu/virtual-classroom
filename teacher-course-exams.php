@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 if (isset($_SESSION)) {
     if ($_SESSION['user_type'] != 'teacher') {
         header("location:loginpage.php");
@@ -68,7 +69,7 @@ if (count($course_list) > 0) {
                 <?php if ($exam->questionExist($x['exam_id']) > 0) {
                             ?>
                 <a href="teacher-result-page.php?exam_id=<?= $x['exam_id']; ?>&course_id=<?= $c['course_id'] ?>"
-                   class="option-btn"> <span style="font-size: 16px;">Question Added
+                   class="option-btn"> <span style="font-size: 16px;">See Result
                     </span></a>
                 <?php } else {
                             ?>
@@ -104,7 +105,7 @@ if (count($course_list) > 0) {
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <form id="access-form"
-                              action="handlers/addExamHandler.php"
+                              action="handlers/addExamHandler.php?course=1"
                               method="post">
                             <div class="modal-header">
                                 <h4 class="modal-title">Exam information</h4>
