@@ -1,9 +1,4 @@
 <?php
-// include("class/users.php");
-// $qus = new users;
-// $cat = $_POST['cat'];
-// $qus->qus_show($cat);
-// $_SESSION['cat'] = $cat;
 
 include_once 'student-navbar.php';
 
@@ -20,50 +15,6 @@ if (isset($_GET['exam_id'])) {
 }
 ?>
 
-<!-- <script>
-        $(function() {
-            $("#draggable").draggable();
-        });
-    </script>
-
-    <script type="text/javascript">
-        function timeout() {
-            var minute = Math.floor(timeLeft / 60);
-            var second = timeLeft % 60;
-            if (timeLeft <= 0) {
-                clearTimeout(tm);
-                document.getElementById("form1").submit();
-            } else {
-                if (minute < 10) {
-                    minute = "0" + minute;
-                }
-                if (second < 10) {
-                    second = "0" + second;
-                }
-                document.getElementById("time").innerHTML = minute + ":" + second;
-            }
-            timeLeft--;
-            var tm = setTimeout(function() {
-                timeout()
-            }, 1000);
-
-
-        }
-
-        //   $(document).ready(function() {
-
-        //     $(document)[0].oncontextmenu = function() { return false; }
-
-        //     $(document).mousedown(function(e) {
-        //         if( e.button == 2 ) {
-        //             alert('Sorry, this functionality is disabled!');
-        //             return false;
-        //         } else {
-        //             return true;
-        //         }
-        //     });
-        // });
-    </script> -->
 
 
 
@@ -71,16 +22,6 @@ if (isset($_GET['exam_id'])) {
 
     <div class="col-sm-8">
         <h1 class="heading">QUIZ</h1>
-        <!-- <script type="text/javascript">
-                var timeLeft = 2 * 60;
-            </script>
-
-            <div id="draggable" class="ui-widget-content">
-                <p>
-                <div id="time" style="float:right">Time</div>
-                <div style="float:right">Timeleft :</div>
-                </p>
-            </div> -->
 
 
 

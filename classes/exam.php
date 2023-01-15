@@ -10,7 +10,18 @@ class exam
         $this->db = Database::getInstance();
     }
 
+    public function getIndividual($exam_id)
 
+    {
+        $info['exam_id'] = $exam_id;
+
+        $found_row = $this->db->fetch_data_with_one_column_check($info, $this->table, "exam_id");
+
+        if (count($found_row) > 0) {
+
+            return $found_row[0];
+        }
+    }
 
     function addExam($exam_info)
     {

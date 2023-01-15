@@ -79,7 +79,7 @@ if (count($course_list) > 0) {
             <a href="student-result-page.php?exam_id=<?= $x['exam_id']; ?>"
                class="notice-btn btn-info"> <span style="font-size: 16px;">See result
                 </span></a>
-            <a href="#"
+            <a href="exam-answer-page.php?exam_id=<?= $x['exam_id']; ?>"
                class="notice-btn btn-info "> <span style="font-size: 16px;">See answers
                 </span></a>
             <?php  } ?>

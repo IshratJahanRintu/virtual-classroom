@@ -4,15 +4,18 @@ include_once 'teacher-navbar.php';
 include_once 'Database.php';
 include_once 'classes/exam.php';
 include_once 'classes/course.php';
+include_once 'classes/user.php';
 $course = new course();
 $exam = new exam();
+$user = new user("student");
 if (isset($_SESSION['user_id']) && $_SESSION['user_type'] == "teacher") {
 
     if (isset($_GET['exam_id'])) {
         $info['exam_id'] = $_GET['exam_id'];
 
         $exam_id = $info['exam_id'];
-        $table_title = $exam->examTopic($exam_id) . "Exam Results";
+        $e = $exam->getIndividual($exam_id);
+        $table_title = $e['topic'] . " Exam Results";
         $result_list = $exam->specificExamResult($exam_id);
     }
 
@@ -32,18 +35,19 @@ if (isset($_SESSION['user_id']) && $_SESSION['user_type'] == "teacher") {
 
 
         <tr>
-
+            <th>Student</th>
             <th>Total mark</th>
-            <th>Your mark</th>
+            <th>Achieved mark</th>
             <th>Percentage</th>
         </tr>
     </thead>
     <tbody>
         <?php foreach ($result_list as  $r) {
+                    $u = $user->getIndividual($r['student_id']);
                     # code...
                 ?>
         <tr>
-
+            <td><?= $u['name'] ?></td>
             <td><?= $r['total_mark'] ?></td>
             <td><?= $r['achieved_mark'] ?></td>
             <th><?= ($r['achieved_mark'] * 100) / $r['total_mark'] . " % "; ?></th>

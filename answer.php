@@ -25,9 +25,10 @@ if (isset($_SESSION['user_id'])) {
     $history['exam_id'] = $exam_id;
     $history['course_id'] = $course_id;
     $history['student_id'] = $_SESSION['user_id'];
-
-    if ($exam->addHistory($history)) {
-      echo "history inserted";
+    if ($exam->examTaken($history)) {
+      header("location:student-result-page.php?exam_id=$exam_id");
+    } else if ($exam->addHistory($history)) {
+      header("location:student-result-page.php?exam_id=$exam_id");
     }
   }
 }
